@@ -1,0 +1,4 @@
+obj/
+cowner
+*.d
+*.o
