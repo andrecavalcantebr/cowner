@@ -12,6 +12,14 @@
 #include <stdbool.h>
 #include <stddef.h>
 
+// Version
+#define COWNER_VERSION_MAJOR  0
+#define COWNER_VERSION_MINOR  1
+#define COWNER_VERSION_PATCH  0
+#define COWNER_VERSION_STRING "0.1.0"
+
+const char *cowner_version(void);
+
 // Public handles 
 
 typedef struct {

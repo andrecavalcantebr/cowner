@@ -63,10 +63,17 @@ $(BIN_DIR) $(OBJ_DIR):
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
-.PHONY: all clean
+.PHONY: all clean release
 
 clean:
 	-@$(RM) -rv $(EXE) $(OBJ_DIR)
+
+VERSION := $(shell grep 'COWNER_VERSION_STRING' $(SRC_DIR)/cowner.h | sed 's/.*"\(.*\)".*/\1/')
+
+release: all
+	git tag -a v$(VERSION) -m "Release v$(VERSION)"
+	git push origin v$(VERSION)
+	@echo "Tagged and pushed v$(VERSION)"
 
 -include $(OBJ:.o=.d)
 

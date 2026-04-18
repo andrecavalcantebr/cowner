@@ -16,6 +16,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+const char *cowner_version(void) {
+    return COWNER_VERSION_STRING;
+}
+
 // Internals types
 
 typedef enum {

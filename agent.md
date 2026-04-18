@@ -6,6 +6,10 @@ A especificação completa do projeto — objetivos, arquitetura, API pública, 
 
 👉 **[README.md](README.md)**
 
+Descrição das decisões de projeto, bugs e outras infos para desenvolvedores:
+
+👉 **[DECISIONS.md](DECISIONS.md)**
+
 ---
 
 ## Contexto para o agente
